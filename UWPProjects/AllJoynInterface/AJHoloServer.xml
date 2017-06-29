@@ -1,0 +1,54 @@
+<node>
+  <interface name="com.mtaulty.AJHoloServer">
+    <method name="AddWorldAnchor">
+      <arg name="anchorId" type="s" direction="in"/>
+      <arg name="byteStart" type="u" direction="in"/>
+      <arg name="byteLength" type="u" direction="in"/>
+      <arg name="lastBlock" type="b" direction="in"/>
+      <arg name="anchorData" type="ay" direction="in"/>
+    </method>
+    <method name="AddHologramToAnchor">
+      <arg name="anchorId" type="s" direction="in"/>
+      <arg name="holoId" type="s" direction="in"/>
+      <arg name="holoTypeName" type="s" direction="in"/>
+      <arg name="position" type="(ddd)" direction="in"/>
+    </method>
+    <method name="RemoveHologram">
+      <arg name="holoId" type="s" direction="in"/>
+    </method>
+    <method name="GetWorldAnchor">
+      <arg name="anchorId" type="s" direction="in"/>
+      <arg name="byteIndex" type="u" direction="in"/>
+      <arg name="byteLength" type="u" direction="in"/>
+      <arg name="anchorData" type="ay" direction="out"/>
+    </method>
+    <method name="GetWorldAnchorIds">
+      <arg name="anchorData" type="as" direction="out"/>
+    </method>
+    <!-- These next two methods are separate because I found that trying to
+         have one return type of type "a(ss(ddd)) broke the code generation
+         tool so I've made this into two calls for now :-(
+         -->
+    <method name="GetHologramIdsAndNames">
+      <arg name="holoIds" type="a(sss)" direction="out"/>
+    </method>
+    <method name="GetHologramTransforms">
+      <arg name="holoPositions" type="a(ddd)" direction="out"/>
+    </method>
+    <signal name="WorldAnchorAdded">
+      <arg name="anchorId" type="s"/>
+    </signal>
+    <signal name="HologramAdded">
+      <arg name="anchorId" type="s"/>
+      <arg name="holoId" type="s"/>
+      <arg name="holoTypeName" type="s"/>
+      <arg name="position" type="(ddd)"/>
+    </signal>
+    <signal name="HologramRemoved">
+      <arg name="holoId" type="s"/>
+    </signal>
+    <property name="DeviceConnectedCount" type="u" access="read">
+      <annotation name="org.freedesktop.DBus.Property.EmitsChangedSignal" value="true"/>
+    </property>
+  </interface>
+</node>

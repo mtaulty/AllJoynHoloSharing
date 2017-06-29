@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>208e194a-fd79-470b-ab5a-c45cec1f2240</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="AJHoloServerConsumer.cpp" />
+    <ClCompile Include="AJHoloServerLegacySignals.cpp" />
+    <ClCompile Include="AJHoloServerProducer.cpp" />
+    <ClCompile Include="AJHoloServerServiceEventAdapter.cpp" />
+    <ClCompile Include="AJHoloServerServiceEventArgs.cpp" />
+    <ClCompile Include="AJHoloServerSignals.cpp" />
+    <ClCompile Include="AllJoynBusObjectManager.cpp" />
+    <ClCompile Include="AllJoynHelpers.cpp" />
+    <ClCompile Include="TypeConversionHelpers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="AJHoloServerConsumer.h" />
+    <ClInclude Include="AJHoloServerEventArgs.h" />
+    <ClInclude Include="AJHoloServerLegacySignals.h" />
+    <ClInclude Include="AJHoloServerMethodResults.h" />
+    <ClInclude Include="AJHoloServerProducer.h" />
+    <ClInclude Include="AJHoloServerServiceEventAdapter.h" />
+    <ClInclude Include="AJHoloServerServiceEventArgs.h" />
+    <ClInclude Include="AJHoloServerSignals.h" />
+    <ClInclude Include="AJHoloServerStructures.h" />
+    <ClInclude Include="AllJoynBusObjectManager.h" />
+    <ClInclude Include="AllJoynHelpers.h" />
+    <ClInclude Include="IAJHoloServerService.h" />
+    <ClInclude Include="TypeConversionHelpers.h" />
+  </ItemGroup>
+</Project>
